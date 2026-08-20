@@ -1,0 +1,156 @@
+Time Complexity — Complete Text Notes (DSA Day 2)
+What is Time Complexity?
+
+Time Complexity is the measure of how the running time of an algorithm grows as the input size (n) increases.
+
+It does not measure actual seconds; it measures the number of operations an algorithm performs.
+
+Goal: Write algorithms that scale efficiently for large inputs.
+
+Big O Notation
+
+Big O represents the worst-case time complexity of an algorithm.
+
+Complexity
+Name - Efficiency - O(1)
+Constant - ⭐ Excellent - O(log n)
+Logarithmic - ⭐ Excellent - O(n)
+Linear - ✅ Good - O(n log n)
+Linearithmic - ✅ Good - O(n²)
+Quadratic - ⚠ Slow-O(2ⁿ)
+Exponential-❌ Very Slow-
+O(n!)-Factorial - ❌ Extremely Slow
+
+1. O(1) — Constant Time
+
+The execution time never changes, regardless of input size.
+
+Example: Accessing an array element.
+
+int value = arr[5];
+
+10 elements → 1 operation
+
+1,000,000 elements → Still 1 operation
+
+Best possible complexity.
+
+2. O(log n) — Logarithmic Time
+
+The problem size is divided in half repeatedly.
+
+Example: Binary Search
+
+while(low <= high){
+    int mid = (low + high)/2;
+}
+
+Elements and Maximum Steps
+8=3
+16=4
+1,024=10
+1,000,000 ~20
+
+Very efficient for sorted data.
+
+3. O(n) — Linear Time
+
+Every element is visited once.
+
+Example: Linear Search
+
+for(int i=0;i<n;i++)
+    if(arr[i]==target) return i;
+
+If n = 1000, about 1000 operations are needed.
+
+4. O(n log n) — Linearithmic
+
+A combination of linear traversal and logarithmic division.
+
+Examples
+
+Merge Sort
+
+Heap Sort
+
+Efficient sorting algorithms
+
+sort(arr.begin(), arr.end());
+
+The STL sort() uses O(n log n) on average.
+
+5. O(n²) — Quadratic Time
+
+Nested loops usually produce quadratic complexity.
+
+for(int i=0;i<n;i++)
+    for(int j=0;j<n;j++)
+        cout<<i+j;
+
+n and Operations
+10 = 100
+100 = 10,000
+1,000 = 1,000,000
+
+Common in Bubble, Selection, and Insertion Sort (worst case).
+
+6. O(2ⁿ) — Exponential Time
+
+Every choice branches into two more choices.
+
+Example: Recursive Fibonacci
+
+int fib(int n){
+    if(n<=1) return n;
+    return fib(n-1)+fib(n-2);
+}
+
+Growth becomes enormous even for small n.
+
+7. O(n!) — Factorial Time
+
+Used when generating all permutations.
+
+next_permutation(arr.begin(), arr.end());
+
+This is among the slowest possible complexities.
+
+Graph of Growth
+
+As n increases, algorithms with higher complexity grow much faster.
+
+Time Complexity of Common Algorithms
+
+Algorithm & Complexity
+Array Access--O(1)
+Push Back (Vector)--O(1) Average
+Linear Search--O(n)
+Binary Search--O(log n)
+Bubble Sort--O(n²)
+Selection Sort--O(n²)
+
+Insertion Sort--O(n²)
+
+Merge Sort--O(n log n)
+
+Heap Sort--O(n log n)
+DFS / BFS -- O(V + E)
+
+Best, Average & Worst Case
+
+Case--Meaning
+
+Best--Minimum time taken
+
+Average--Expected running time
+
+Worst--Maximum time taken (Big O)
+
+Example: Linear Search
+
+Best → First element found → O(1)
+
+Average → Middle element → O(n)
+
+Worst → Last element/not found → O(n)
