@@ -1,107 +1,126 @@
-# 🚀 LeetCode Journey — Day 1
+# 🚀 DSA Journey — Day 3: Arrays & Searching
 
-My daily LeetCode practice repository for improving **Data Structures & Algorithms** using **C++**.
+My daily **Data Structures & Algorithms (DSA)** practice repository for mastering problem-solving and coding interviews using **C++**.
 
 ---
 
-# 📌 Problem 1: Two Sum
+# 📌 Topic: Array Operations, Sorting & Searching
 
-* **Platform:** LeetCode
-* **Difficulty:** Easy
-* **Language:** C++
+**Language:** C++
+**Category:** DSA Fundamentals
 
-## 📝 Problem Statement
+### 📝 What I Practiced
 
-Given an integer array `nums` and an integer `target`, return the **indices** of the two numbers such that they add up to the target.
+* Array Traversal
+* Array Insertion
+* Array Deletion
+* Bubble Sort
+* Insertion Sort
+* Selection Sort
+* Linear Search
+* Binary Search
+* Merge Two Sorted Arrays
 
-**Example**
+---
+
+# ⚡ Time & Space Complexity
+
+| Algorithm           | Time Complexity      | Space Complexity |
+| ------------------- | -------------------- | ---------------- |
+| Array Traversal     | O(n)                 | O(1)             |
+| Array Insertion     | O(n)                 | O(1)             |
+| Array Deletion      | O(n)                 | O(1)             |
+| Bubble Sort         | O(n²) *(Best: O(n))* | O(1)             |
+| Insertion Sort      | O(n²) *(Best: O(n))* | O(1)             |
+| Selection Sort      | O(n²)                | O(1)             |
+| Linear Search       | O(n) *(Best: O(1))*  | O(1)             |
+| Binary Search       | O(log n)             | O(1)             |
+| Merge Sorted Arrays | O(n + m)             | O(n + m)         |
+
+---
+
+# 💡 Concepts Learned
+
+### 1. Array Traversal
+
+Visit every element of an array exactly once using a loop.
+
+### 2. Array Insertion
+
+Insert a new element at a specific position by shifting elements to the right.
+
+### 3. Array Deletion
+
+Remove an element and shift the remaining elements to the left.
+
+### 4. Bubble Sort
+
+Repeatedly compares adjacent elements and swaps them until the array becomes sorted.
+
+### 5. Insertion Sort
+
+Builds a sorted array by inserting each element into its correct position.
+
+### 6. Selection Sort
+
+Finds the minimum element and places it at the beginning in every pass.
+
+### 7. Linear Search
+
+Checks every element sequentially until the target is found.
+
+### 8. Binary Search
+
+Searches a **sorted array** by repeatedly dividing the search space in half.
+
+### 9. Merge Two Sorted Arrays
+
+Combines two sorted arrays into one sorted array using the two-pointer technique.
+
+---
+
+# 📂 Files Included
 
 ```text
-Input:
-nums = [2,7,11,15]
-target = 9
-
-Output:
-[0,1]
+01-Traversal.cpp
+02-Insertion.cpp
+03-Deletion.cpp
+04-BubbleSort.cpp
+05-InsertionSort.cpp
+06-SelectionSort.cpp
+07-LinearSearch.cpp
+08-BinarySearch.cpp
+09-MergeSortedArrays.cpp
 ```
 
----
-
-## 💡 My Approach (Brute Force)
-
-I used a **nested loop** approach:
-
-1. Pick one element using the outer loop.
-2. Compare it with every following element.
-3. If their sum equals the target, return both indices immediately.
-
-This checks every possible pair until the correct answer is found.
+Each file contains a complete C++ implementation with comments and output.
 
 ---
 
-## ⚙️ Solution
+# 📚 Concepts Practiced
 
-```cpp
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-
-        for (int i = 0; i < nums.size(); i++) {
-            for (int j = i + 1; j < nums.size(); j++) {
-
-                if (nums[i] + nums[j] == target) {
-                    return {i, j};
-                }
-            }
-        }
-
-        return {};
-    }
-};
-```
+* Arrays
+* Time & Space Complexity
+* Nested Loops
+* Searching Algorithms
+* Sorting Algorithms
+* Two Pointer Technique
+* Index Manipulation
 
 ---
 
-## ❓ Why is there no `main()`?
+# ✅ Progress Tracker
 
-LeetCode already provides the `main()` function internally.
-
-When you submit, LeetCode automatically creates an object of the `Solution` class and calls your `twoSum()` function with the test cases.
-
-So we only write the required function—not because of OOP, but because it's the format LeetCode expects.
-
----
-
-## ⏱️ Complexity Analysis
-
-| Complexity | Value |
-| ---------- | ----- |
-| **Time**   | O(n²) |
-| **Space**  | O(1)  |
+| Day       | Topic                           | Status          |
+| --------- | ------------------------------- | --------------- |
+| Day 1     | Two Sum                         | ✅ Completed     |
+| Day 2     | C++ STL                         | ✅ Completed     |
+| **Day 3** | **Arrays, Sorting & Searching** | **✅ Completed** |
 
 ---
 
-## 📚 Concepts Practiced
+## 🎯 Goal
 
-* Vectors (`vector<int>`)
-* Nested `for` loops
-* Array traversal
-* Index-based access
-* Conditional statements
-* Returning vectors (`return {i, j}`)
+Solve DSA problems consistently, build strong fundamentals, and prepare for **coding interviews** and **placements** one day at a time.
 
----
-
-## ✅ Progress
-
-| Day   | Problem | Difficulty | Status      |
-| ----- | ------- | ---------- | ----------- |
-| Day 1 | Two Sum | Easy       | ✅ Completed |
-
----
-
-### 🎯 Goal
-
-Solve LeetCode consistently, strengthen DSA fundamentals, and prepare for coding interviews and placements.
-
-**Day 1 Complete ✅**
+**Day 3 Complete ✅**
